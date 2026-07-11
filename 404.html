@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 הדף לא נמצא | משה תקשורת</title>
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#04080f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%2304080f'/%3E%3Cpath d='M12 5a7 7 0 0 1 7 7' stroke='%234da6ff' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='12' cy='12' r='2.4' fill='%234da6ff'/%3E%3C/svg%3E">
+  <!--
+    This page is intentionally SELF-CONTAINED (no external CSS/JS/images).
+    GitHub Pages serves 404.html for ANY missing URL at ANY depth, where
+    neither relative nor root-absolute asset paths can be trusted.
+  -->
+  <style>
+    :root {
+      --ink: #04080f;
+      --azure: #4da6ff;
+      --azure-deep: #1e66dd;
+      --text-hi: #eef4ff;
+      --text-lo: #9db0cc;
+      --line: rgba(146, 182, 232, .22);
+    }
+    * { box-sizing: border-box; margin: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: "Rubik", "IBM Plex Sans Hebrew", system-ui, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(52rem 30rem at 84% -14%, rgba(38, 104, 214, .22), transparent 62%),
+        radial-gradient(40rem 26rem at 6% 110%, rgba(24, 74, 158, .16), transparent 62%),
+        var(--ink);
+      color: var(--text-hi);
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+      overflow: hidden;
+      text-align: center;
+      line-height: 1.7;
+    }
+    .arcs {
+      position: fixed;
+      inset-inline-end: -15rem;
+      top: -14rem;
+      inline-size: 44rem;
+      aspect-ratio: 1;
+      color: var(--azure);
+      opacity: .14;
+      pointer-events: none;
+      animation: spin 90s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .arcs { animation: none; } }
+    main { position: relative; max-width: 34rem; }
+    .code {
+      font-weight: 800;
+      font-size: clamp(4.4rem, 16vw, 7rem);
+      line-height: 1;
+      letter-spacing: .04em;
+      background: linear-gradient(120deg, #9ccbff 0%, var(--azure) 45%, #77b8ff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      direction: ltr;
+    }
+    h1 { font-size: clamp(1.5rem, 4.6vw, 2.1rem); margin-block: 1rem .6rem; }
+    p { color: var(--text-lo); font-size: 1.02rem; }
+    .btns { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; margin-block-start: 2rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .95rem 1.7rem;
+      border-radius: 999px;
+      font: inherit;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn--primary {
+      color: #fff;
+      border: 0;
+      background: linear-gradient(135deg, var(--azure), var(--azure-deep));
+      box-shadow: 0 10px 28px rgba(30, 102, 221, .35);
+    }
+    .btn--primary:hover { box-shadow: 0 14px 34px rgba(30, 102, 221, .5); }
+    .btn--ghost {
+      color: var(--text-hi);
+      background: rgba(13, 24, 48, .5);
+      border: 1px solid var(--line);
+    }
+    .btn--ghost:hover { border-color: rgba(122, 180, 255, .55); }
+    .btn:focus-visible { outline: 2px solid var(--azure); outline-offset: 3px; }
+    .brand { margin-block-start: 2.6rem; color: var(--text-lo); font-size: .92rem; }
+    .brand b { color: var(--text-hi); }
+  </style>
+</head>
+<body>
+  <div class="arcs" aria-hidden="true">
+    <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".5" stroke-linecap="round" width="100%" height="100%">
+      <path d="M50 7a43 43 0 0 1 43 43"/>
+      <path d="M50 16.5a33.5 33.5 0 0 1 33.5 33.5"/>
+      <path d="M50 26a24 24 0 0 1 24 24"/>
+      <path d="M50 35.5a14.5 14.5 0 0 1 14.5 14.5"/>
+      <circle cx="50" cy="50" r="2" fill="currentColor" stroke="none"/>
+    </svg>
+  </div>
+
+  <main>
+    <p class="code" aria-hidden="true">404</p>
+    <h1>הדף הזה לא נמצא</h1>
+    <p>נראה שהקישור שהגעתם דרכו כבר לא קיים, או שנפלה טעות בכתובת. כל מה שחשוב נמצא במרחק לחיצה אחת.</p>
+    <div class="btns">
+      <a class="btn btn--primary" id="home-link" href="/">חזרה לדף הבית</a>
+      <a class="btn btn--ghost" id="contact-link" href="/contact/">צרו קשר</a>
+      <button class="btn btn--ghost" type="button" id="back-btn">חזרה אחורה</button>
+    </div>
+    <p class="brand"><b>משה תקשורת</b> · פתרונות מיגון, אבטחה ותקשורת מתקדמים · <span dir="ltr">054-6742162</span></p>
+  </main>
+
+  <script>
+    (function () {
+      /* Resolve the site base at runtime so the links work on:
+         a custom domain / user site        -> "/"
+         a GitHub Pages project site        -> "/<repo>/"
+         Override explicitly with <body data-site-base="/my-base/"> if needed. */
+      var base = document.body.getAttribute('data-site-base');
+      if (!base) {
+        var seg = location.pathname.split('/').filter(Boolean);
+        var ghProject = location.hostname.slice(-10) === '.github.io' && seg.length > 0;
+        base = ghProject ? '/' + seg[0] + '/' : '/';
+      }
+      document.getElementById('home-link').href = base;
+      document.getElementById('contact-link').href = base + 'contact/';
+      var back = document.getElementById('back-btn');
+      if (history.length > 1) {
+        back.addEventListener('click', function () { history.back(); });
+      } else {
+        back.hidden = true;
+      }
+    })();
+  </script>
+</body>
+</html>

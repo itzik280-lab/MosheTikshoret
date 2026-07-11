@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.moshe-tikshoret.co.il/sitemap.xml
