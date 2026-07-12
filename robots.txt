@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.moshe-tikshoret.co.il/sitemap.xml
+Sitemap: https://itzik280-lab.github.io/MosheTikshoret/sitemap.xml
