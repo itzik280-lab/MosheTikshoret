@@ -34,6 +34,11 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') closeNav(true);
     });
+    document.addEventListener('pointerdown', function (e) {
+      if (toggle.getAttribute('aria-expanded') !== 'true') return;
+      if (navList.contains(e.target) || toggle.contains(e.target)) return;
+      closeNav(false);
+    });
     $$('a', navList).forEach(function (a) {
       a.addEventListener('click', function () { closeNav(false); });
     });
