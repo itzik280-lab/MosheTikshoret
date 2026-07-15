@@ -1384,3 +1384,28 @@ button.link-more {
   text-decoration: none;
 }
 .more-link:hover, .more-link:focus-visible { color: var(--azure); }
+
+/* ---------- Field gallery (projects) ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+  gap: 1.1rem;
+}
+.gallery-item { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.gallery-item img,
+.gallery-item video {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  background: var(--navy-950);
+}
+.gallery-item video { aspect-ratio: 9 / 16; object-fit: cover; }
+.gallery-item figcaption {
+  padding: .8rem .95rem .95rem;
+  font-size: .85rem;
+  line-height: 1.55;
+  color: var(--text-lo);
+  border-top: 1px solid var(--line);
+  margin-block-start: auto;
+}
+@media (min-width: 700px) { .gallery-item--wide { grid-column: span 2; } }
