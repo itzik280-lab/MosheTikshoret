@@ -555,5 +555,32 @@
     </a>
   </div>
 
+  <!-- NagishLi accessibility plugin (self-hosted, with the jQuery build it requires) -->
+  <script>
+    nl_pos = "br";
+    nl_color = "blue";
+    nl_compact = "1";
+    nl_contact = "n:משה תקשורת|p:054-6742162";
+  </script>
+  <script src="../nl-files/jquery-1.8.3.min.js" defer></script>
+  <script src="../nagishli.js?v=2.3" charset="utf-8" defer></script>
+  <script>
+    /* Integration shim: on small screens, lift NagishLi's default corner above
+       the site's bottom call bar. Runs once after load; if the visitor moves
+       the bar (NagishLi remembers positions), we leave it alone. */
+    window.addEventListener('load', function () {
+      var tries = 0;
+      var timer = setInterval(function () {
+        var bar = document.getElementById('NagishLiBar');
+        if (!bar) { if (++tries > 40) clearInterval(timer); return; }
+        clearInterval(timer);
+        var b = (bar.style.bottom || '').trim();
+        if (window.innerWidth <= 760 && (b === '0vh' || b === '0px' || b === '0')) {
+          bar.style.setProperty('bottom', 'calc(4.6rem + env(safe-area-inset-bottom))', 'important');
+        }
+      }, 150);
+    });
+  </script>
+
 </body>
 </html>
